@@ -1,0 +1,11 @@
+{% extends 'management/myadmin/base.html'%}
+{% load static from staticfiles %}
+
+{% block mainbody%}
+    社团名称:   {{ club.name }} <a href="{% url 'show_members' club.id %}">查看该社团成员</a><br><br>
+    社团规模:   {{ club.price }}人 <br><br>
+    社长:     {{ club.author }}   <a href="{% url 'myadmin_change_member' club.id %}">更换社长</a> <br><br>
+    社团成立日期:     {{ club.publish_date  }} <br><br>
+    社团类别:   {{ club.category }} <br><br>
+    社团描述:   {{ club.detail }} <br> <br>
+{% endblock %}

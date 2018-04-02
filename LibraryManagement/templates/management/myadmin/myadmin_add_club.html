@@ -1,0 +1,58 @@
+{% extends 'management/myadmin/base.html'%}
+{% load static from staticfiles %}
+
+{% block mainbody%}
+    <form method="POST" role="form" class="form-horizontal" action="{% url 'myadmin_insert_club' %}">
+                    {% csrf_token %}
+                    <h1 class="form-signin-heading text-center">添加社团信息</h1>
+
+                    <div class="form-group">
+                        <label for="id_name" class="col-md-3 control-label">社团名称：</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="id_name" required name="name" autofocus>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_detail" class="col-md-3 control-label">社团描述：</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" required name="detail" id="id_detail">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_author" class="col-md-3 control-label">社长：</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" required name="author" id="id_author">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_category" class="col-md-3 control-label">社团类型：</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" required name="category" id="id_category">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_price" class="col-md-3 control-label">社团规模：</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" required name="price" id="id_price">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_pubdate" class="col-md-3 control-label">社团成立日期：</label>
+                        <div class="col-md-9">
+                            <input type="date" class="form-control" required name="publish_date" id="id_pubdate">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-md-4 col-md-offset-4">
+                            <button class="btn btn btn-primary btn-block" type="submit">提交</button>
+                        </div>
+                    </div>
+                </form>
+{% endblock %}

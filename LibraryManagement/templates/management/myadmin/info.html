@@ -1,0 +1,14 @@
+<h3>{{ info }}</h3>
+{% if info == '注册失败' %}
+    <a href="{% url 'myadmin_reg' %}">返回注册页面</a>
+    {% elif info == '注册成功' %}
+    <a href="{% url 'myadmin_login' %}">点此登录</a>
+    {% elif info == '登录失败, 请输入正确的密码' %}
+    <a href="{% url 'myadmin_login' %}">点此重新登录</a>
+    {% elif info == '登录失败, 您输入的账号不存在' %}
+    <a href="myadmin_login.html">点此重新登录</a>
+    {% elif info == '添加成功' %}
+    <a href="{% url 'homepage' %}">点此返回首页</a>
+    {% elif info == '添加失败' %}
+    <a href="{% url 'homepage' %}">点此返回首页</a>
+{% endif %}

@@ -1,0 +1,10 @@
+{% extends 'management/myadmin/base.html'%}
+{% load static from staticfiles %}
+
+{% block mainbody%}
+    {% for club in clubs %}
+        <div>
+            <a href="{% url 'myadmin_club_info' club.id %}">{{ club.name }}</a> <br><br>
+        </div>
+    {% endfor %}
+{% endblock %}

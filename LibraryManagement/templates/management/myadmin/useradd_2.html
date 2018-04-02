@@ -1,0 +1,34 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="ie6 ielt7 ielt8 ielt9"><![endif]--><!--[if IE 7 ]><html lang="en" class="ie7 ielt8 ielt9"><![endif]--><!--[if IE 8 ]><html lang="en" class="ie8 ielt9"><![endif]--><!--[if IE 9 ]><html lang="en" class="ie9"> <![endif]--><!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en"><!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Login - Akira</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="{% static 'myadmin/css/bootstrap.min.css' %}" rel="stylesheet">
+		<link href="{% static 'myadmin/css/bootstrap-responsive.min.css' %}" rel="stylesheet">
+		<link href="{% static 'myadmin/css/site.css' %}" rel="stylesheet">
+		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	</head>
+	<body>
+		<div id="login-page" class="container">
+			<h1>后台管理员注册</h1>
+			<form id="login-form" class="well" action="{% url 'myadmin_usersinsert' %}" method="post">
+            {% csrf_token %}
+			账号:<input type="text" name="username" class="span2" placeholder="Email" /><br />
+			密码:<input type="password" name="password" class="span2" placeholder="Password" /><br />
+			真实姓名:<input type="text" name="name" class="span2"  /><br />
+			邮箱:<input type="text" name="email" class="span2"  /><br />
+			<button type="submit" class="btn btn-primary">注册</button>
+			<button type="reset" class="btn">重置</button>
+            <br>
+            <span style='color:red;margin-left:50px;line-height: 50px;'>{{info}}</span>
+        </form>
+        </div>
+		<script src="{% static 'myadmin/js/jquery.min.js' %}"></script>
+		<script src="{% static 'myadmin/js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'myadmin/js/site.js' %}"></script>
+	</body>
+</html>

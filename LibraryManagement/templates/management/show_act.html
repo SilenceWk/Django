@@ -1,0 +1,15 @@
+{% extends "management/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+    {% for club in clubs %}
+        <a href="{% url 'show_act_detail' club.id %}"><img src="/static/zixun/_m{{ club.activity_img }}" alt=""></a>
+        <div  style="width: 100px;margin-left: 90px">
+            <a href="{% url 'show_act_detail' club.id %}">{{ club.activity_name }}</a>
+        </div>
+    {% endfor  %}
+
+
+{% endblock%}
+

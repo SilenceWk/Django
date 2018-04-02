@@ -1,0 +1,30 @@
+{% extends 'management/myadmin/base.html'%}
+{% load static from staticfiles %}
+
+{% block mainbody%}
+<div class="span9">
+                    <!-- 主体开始 -->
+					<h1>
+						首页
+					</h1>
+					<div class="hero-unit">
+						<h1>
+							Welcome!
+						</h1>
+						<p>
+							欢迎来到网站的后台!
+						</p>
+						<p>
+							<a href="help.htm" class="btn btn-primary btn-large">Start Tour</a> <a class="btn btn-large">No Thanks</a>
+						</p>
+					</div>
+						</tbody>
+					</table>
+					<ul class="pager">
+						<li class="next">
+							<a href="activity.htm">More &rarr;</a>
+						</li>
+					</ul>
+                    <!-- 主体结束 -->
+</div>
+{% endblock %}

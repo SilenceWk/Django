@@ -1,0 +1,12 @@
+{% extends 'management/myadmin/base.html'%}
+{% load static from staticfiles %}
+
+{% block mainbody%}
+    {% for user in users %}
+        {% if user.permission == 1 %}
+            社员姓名:{{ user.nickname }}    <a href="{% url 'myadmin_weiren' user.id %}">委任社长</a> <br>
+        {% elif user.permission > 1 %}
+            现任社长: {{ user.nickname }} <br>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,37 @@
+
+<h3>
+        会员信息管理
+    </h3>
+    <form id="edit-profile" action="{% url 'myadmin_usersinsert' %}" class="form-horizontal" method="post">
+        {% csrf_token %}
+        <fieldset>
+            <legend>添加会员信息</legend>
+            <div class="control-group">
+                <label class="control-label" for="input01">账号：</label>
+                <div class="controls">
+                    <input type="text" name="username" class="input-xlarge" id="input01" value="" />
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="input01">密码：</label>
+                <div class="controls">
+                    <input type="password" name="password" class="input-xlarge" id="input01"/>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="input01">真实姓名：</label>
+                <div class="controls">
+                    <input type="text" name="name" class="input-xlarge" id="input01"/>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="input01">email邮箱：</label>
+                <div class="controls">
+                    <input type="text" name="email" class="input-xlarge" id="input01"/>
+                </div>
+            </div>                        
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">添加</button> <button type="reset" class="btn">重置</button>
+            </div>
+        </fieldset>
+    </form>

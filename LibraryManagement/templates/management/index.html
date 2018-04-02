@@ -1,0 +1,16 @@
+{% extends "management/base.html" %}
+{% load staticfiles %}
+{% block title %}社团管理{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 well">
+                <h2>&emsp;&emsp;Here is the homepage!</h2>
+                <h3 class="text-center"><span class="text-info"><a href="{% url 'myadmin_login' %}">点击进入后台管理员界面</a></span></h3>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

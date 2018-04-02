@@ -1,0 +1,40 @@
+{% extends "management/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+    <form  action="{% url 'club_zixun_insert' %}" class="form-horizontal" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+  <fieldset>
+        <legend style="text-align: center">添加活动信息</legend>
+        <div class="control-group" style="text-align: center">
+            <label class="control-label" for="input01" >活动名称：</label>
+            <div class="controls">
+                <input type="text" name="activity_name" class="input-xlarge" id="input01"/>
+            </div>
+        </div>
+        <div class="control-group" style="text-align: center">
+            <label class="control-label" for="input01">活动描述：</label>
+            <div class="controls">
+                <input type="text" name="activity_describe" class="input-xlarge" id="input01"/>
+            </div>
+        </div>
+        <div class="control-group" style="text-align: center">
+            <label class="control-label" for="input01">活动人数：</label>
+            <div class="controls">
+                <input type="text" name="activity_person" class="input-xlarge" id="input01"/>
+            </div>
+        </div>
+        <div class="control-group" style="text-align: center">
+            <label class="control-label" for="input01">活动图片：</label>
+            <div class="controls" style="margin-left: 45%">
+                <input type="file" name="pic" class="input-xlarge" id="input01"/>
+            </div>
+        </div>
+      <br>
+        <div class="form-actions" style="text-align: center">
+            <button type="submit" class="btn btn-primary">添加</button> <button type="reset" class="btn">重置</button>
+        </div>
+    </fieldset>
+    </form>
+
+{% endblock %}
