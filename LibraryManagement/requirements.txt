@@ -7,7 +7,7 @@ Django==1.8.2
 get==0.0.39
 idna==2.6
 kombu==4.1.0
-Pillow==5.0.0
+Pillow==6.2.0
 post==0.0.26
 public==0.0.65
 PyMySQL==0.8.0
