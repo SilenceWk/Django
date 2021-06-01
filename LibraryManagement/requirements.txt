@@ -14,5 +14,5 @@ PyMySQL==0.8.0
 pytz==2018.3
 query-string==0.0.28
 requests==2.18.4
-urllib3==1.22
+urllib3==1.26.5
 vine==1.1.4
